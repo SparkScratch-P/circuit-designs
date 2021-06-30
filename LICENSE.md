@@ -1,0 +1,2 @@
+This repository contains items , each lisensed under **Attribution-ShareAlike 3.0 (CC-BY-SA 3.0)** License terms. But this Repo doesn't have a lisense as a whole. This has Embeds from [TikerCAD](https://www.tinkercad.com/users/0TMFbOW7Vt3?category=circuits&sort=likes&view_mode=default).
+This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. [More info on Creative Commons licenses](http://creativecommons.org/licenses/).
