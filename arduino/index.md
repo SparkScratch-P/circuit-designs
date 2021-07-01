@@ -1,6 +1,6 @@
 # My Arduino Circuit Designs :
 
-This contains some of my best arduino circuit designs from TinkerCAD. Scroll Down to see!
+This contains some of my best arduino circuit designs from TinkerCAD. Scroll Down to see and simulate!
 ---
 
 ### Arduino LED blink
