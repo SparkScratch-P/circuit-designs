@@ -14,3 +14,7 @@ Detects movement using a passive infrared sensor and lights up an alert LED on d
 This unique circuit detects light in the surroundings and controls the equivalent brightness of the LED.
 
 <iframe width="725" height="453" src="https://www.tinkercad.com/embed/g9V2hx7jXxA?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+---
+## Keep a track on us and get more ideas for your projects!!!
