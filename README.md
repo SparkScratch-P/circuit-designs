@@ -15,5 +15,7 @@ Pls Luv the circuits you like in this profile !
 
 # [Arduino Circuits](https://sparkscratch-p.github.io/circuit-designs/arduino/) & [Simple Circuits](https://sparkscratch-p.github.io/circuit-designs/simple/)
 
+The Directories under this Repository may load slowly and requires adequate time and bandwidth.
+
 You can Simulate them and view Code right here, on my site!
 --- 
