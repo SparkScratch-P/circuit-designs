@@ -7,6 +7,118 @@ Visit Circuit Designs [Home](https://sparkscratch-p.github.io/circuit-designs/) 
 This contains some of my best arduino circuit designs from TinkerCAD. Scroll Down to see and simulate!
 ---
 
+### Smart Dustbin
+
+This is the mechanism of a Smart Dustbin. It is fitted with two systems : (i) The system of automatic closing snd opening when it detects and humanoid movement in front of the dustbin. This is sensed by a PIR, provided, there is space to dump more. (ii) The Second system includes a HCSR04 Ultrasonic Distance Sensor that measures the level of trash in the bin. Once it is filled to an optimum level, it will send an SMS to the Control Room, that will include the Dustbin number.
+
+The embd doesnt contain GSM. So, the rest of the entire is available here.
+
+```
+#include <Servo.h>
+#include <GSM.h>
+
+#define PINNUMBER ""
+
+// initialize the library instance
+GSM gsmAccess;
+GSM_SMS sms;
+
+
+int movement = 0;
+
+int remoteNum = 3322861212;
+
+int txtMsg = 1001234;
+
+int height = 0;
+
+int i = 0;
+
+int j = 0;
+
+Servo servo_2;
+
+long readUltrasonicDistance(int triggerPin, int echoPin)
+{
+  pinMode(triggerPin, OUTPUT);  // Clear the trigger
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigger pin to HIGH state for 10 microseconds
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);
+  pinMode(echoPin, INPUT);
+  // Reads the echo pin, and returns the sound wave travel time in microseconds
+  return pulseIn(echoPin, HIGH);
+}
+
+void setup()
+{
+  pinMode(8, OUTPUT);
+  pinMode(11, OUTPUT);
+  servo_2.attach(2, 500, 2500);
+
+  pinMode(13, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(4, INPUT);
+
+Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+
+ // If your SIM has PIN, pass it as a parameter of begin() in quotes
+  while (notConnected) {
+    if (gsmAccess.begin(PINNUMBER) == GSM_READY) {
+      notConnected = false;
+    } else {
+      Serial.println("Not connected");
+      delay(1000);
+    }
+}
+
+void loop()
+  digitalWrite(8, HIGH);
+  digitalWrite(11, LOW);
+  servo_2.write(0);
+  digitalWrite(13, HIGH);
+  height = 0.01723 * readUltrasonicDistance(13, A0);
+  if (height > 7) {
+    digitalWrite(8, HIGH);
+    digitalWrite(11, LOW);
+    digitalWrite(7, HIGH);
+    movement = digitalRead(4);
+    if (movement == HIGH) {
+      digitalWrite(7, LOW);
+      servo_2.write(90);
+    }
+    delay(1000); // Wait for 1000 millisecond(s)
+    digitalWrite(7, HIGH);
+    movement = digitalRead(4);
+    if (movement == LOW) {
+      servo_2.write(0);
+    }
+    if (movement == LOW) {
+      servo_2.write(0);
+    }
+  } else {
+    if (height <= 7) {
+      digitalWrite(8, LOW);
+      digitalWrite(11, HIGH);
+  sms.beginSMS(remoteNum);
+  sms.print(txtMsg);
+  sms.endSMS();
+  Serial.println("\nCOMPLETE!\n");
+       while (!(height > 7)) {
+        delay(60000); // Wait for 60000 millisecond(s)
+      }
+    }
+  }
+  delay(10); 
+}
+```
+<iframe width="560" height="350" src="https://www.tinkercad.com/embed/frbvXMCDgij?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+ 
 ### Arduino LED blink
 
 Blinking an LED build with Arduino
