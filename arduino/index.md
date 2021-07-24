@@ -36,7 +36,7 @@ It is an ultrasonic Arduino distance indicator that uses a single RGB LED to ale
 
 A very simple design of a circuit that automatically starts the motor of an Air Cooler when the temperature rises above 27 deg. C and switches it off once it goes down! This will help save lots of electrical energy and reduce pollution caused by all-time running ACs.
 
-<iframe width="560" height="350" src="https://www.tinkercad.com/embed/eYvK2NJuWKA?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<iframe width="560" height="350" src="https://www.tinkercad.com/embed/f1cPpDSqFJV?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 ### Automatic Water-Pump (Arduino Zero-Radiation Edition)
 
@@ -50,6 +50,11 @@ This alert-based sensor will ring the buzzer once the ambient temperature of the
 
 <iframe width="560" height="350" src="https://www.tinkercad.com/embed/6ERZGU1c7QK?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
+### Automatic Street Lights
+
+This is a simple mechanism for an automatic street light system, that glows up automatically when the light goes dim, whichever part of the day it is! A photoresistor senses the ambient brightness and turns the power supply to the light on when the external brightness goes off. This is much efficient and more advantageous than switch-controlled, or timer-based street lights.
+
+<iframe width="560" height="350" src="https://www.tinkercad.com/embed/0ogDIXZ6Zu9?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 ### Smart Dustbin
 
