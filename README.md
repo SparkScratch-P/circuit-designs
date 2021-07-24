@@ -11,6 +11,12 @@ By [SparkScratch-P](https://sparkscratch-p.github.io/)
    <a href="https://www.tinkercad.com/users/0TMFbOW7Vt3?category=circuits&sort=likes&view_mode=default"> <img src="https://github.com/SparkScratch-P/sparkscratch-p.github.io/blob/main/download%20(1).png?raw=true" alt="CAD ac" width="100"/> </a>
 
 Pls Luv the circuits you like in this profile ! 
+
+## Visit the Pin Board!
+
+<a href="https://in.pinterest.com/prodyumna9d/spark-arduino-circuit-design-ideas/">
+         <img src="https://github.com/SparkScratch-P/sparkscratch-p.github.io/blob/main/computer-icons-quora-logo-social-network-pintrest-88eba86d239a9a6c0c042f7edaff0463.png?raw=true" alt="discord" width="50">
+      </a>
   
 ## Check Out the Two Categories of This Circuit Collection :
 
